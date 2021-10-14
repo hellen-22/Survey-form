@@ -1,107 +1,146 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SURVEY-FORM</title>
-        <link href="survey-form.css" type="text/css" rel="stylesheet">
+        <!-- <link href="survey-form.css" type="text/css" rel="stylesheet"> -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        <h1 id="title">SURVEY FORM</h1>
-        <p id="description">We offer quality online learning related to tech. You can join us and be part of growing your technical skills.<br> <strong>Fill in the following details to join:</strong> </p>
         <div class="container">
+            <h1 id="title">SURVEY FORM</h1>
+            <p id="description">We offer quality online learning related to tech. You can join us and be part of growing your technical skills.<br> <strong>Fill in the following details to join:</strong> </p>
             <form id="survey-form">
-                <div class="container-form">
+                <div class="form-group">
                     <label id="name-label" for="name">Name</label>
-                    <input id="name" type="text"  name="name" class="input" placeholder="Enter name" required>
+                    <input id="name" type="text"  name="name" class="form-control" placeholder="Enter name" required>
                 </div> 
-                <div class="container-form">  
+                <div class="form-group">  
                     <label id="email-label" for="email">Email </label>
-                    <input id="email" name="email" type="email" class="input" placeholder="Enter email" required>
+                    <input id="email" name="email" type="email" class="form-control" placeholder="Enter email" required>
                 </div>
-                <div class="container-form">   
+                <div class="form-group">   
                     <label id="number-label" for="number">Age</label>
-                    <input id="number" type="number" name="number" class="input" min="0" max="100" placeholder="Enter age">
+                    <input id="number" type="number" name="number" class="form-control" min="0" max="100" placeholder="Enter age">
                 </div>
-                
-                <div class="container-form">
+
+                <div class="form-group">
                     <p>What level of education are you?</p>
-                    <select id="dropdown" name="education" class="input" required>
-                      <option disabled selected value>Select current level</option>
-                      <option>Highschool</option>
-                      <option>Undergraduate</option>
-                      <option>Graduate</option>
-                      <option>Self taught</option>
+                    <select id="dropdown" name="education" class="form-control" required>
+                    <option disabled selected value>Select current level</option>
+                    <option>Highschool</option>
+                    <option>Undergraduate</option>
+                    <option>Graduate</option>
+                    <option>Self taught</option>
                     </select>
-                  </div>
-                  <div class="container-form">
+                </div>
+                <div class="form-group">
                     <p>Current county</p>
-                    <select id="dropdown" name="county" class="input"  required>
-                      <option disabled selected value>Select county</option>
-                      <option>Nairobi</option>
-                      <option>Kiambu</option>
-                      <option>Murang'a</option>
-                      <option>Nyeri</option>
-                      <option>Machakos</option>
-                      <option>Kitui</option>
-                      <option>Kakamega</option>
-                      <option>Eldoret</option>
-                      <option>Kisumu</option>
-                      <option>Garissa</option>
-                      <option>Mombasa</option>
+                    <select id="dropdown" name="county" class="form-control"  required>
+                        <option disabled selected value>Select county</option>
+                        <option>Nairobi</option>
+                        <option>Kiambu</option>
+                        <option>Murang'a</option>
+                        <option>Nyeri</option>
+                        <option>Machakos</option>
+                        <option>Kitui</option>
+                        <option>Kakamega</option>
+                        <option>Eldoret</option>
+                        <option>Kisumu</option>
+                        <option>Garissa</option>
+                        <option>Mombasa</option>
                     </select>
-                  </div>
-                <div class="container-form">
+                </div>
+                <div class="form-group">
                     <p>What's your gender?</p>
-                    <label for="female">
-                        <input id="female" value="Female" type="radio" class="input" name="Female-Male-none">Female
-                    </label>
-                    <label for="male">
-                        <input id="male" value="Male" type="radio" class="input" name="Female-Male-none">Male
-                    </label>
-                    <label for="none">
-                        <input id="none" value="none" type="radio" class="input" name="Female-Male-none">Prefer not saying
-                    </label>
+                    <div class="radio">
+                        <label class="radio-inline" for="female">
+                            <input id="female" value="Female" type="radio" name="Female-Male-none">Female
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label class="radio-inline" for="male">
+                            <input id="male" value="Male" type="radio" name="Female-Male-none">Male
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label class="radio-inline" for="none">
+                            <input id="none" value="none" type="radio" name="Female-Male-none">Prefer not saying
+                        </label>
+                    </div>
                 </div>
                 
-                <div id="range-form" class="container-form">
+                <div id="range-form" class="form-group">
                     <p>How experienced are you, in the range of 5?</p>
-                    <label for="ONE1">
-                        <input id="ONE1" value="one" type="radio" class="input" name="one-two-three-four-five">1
-                    </label>
-                    <label for="TWO2">
-                        <input id="TWO2" value="two" type="radio" class="input" name="one-two-three-four-five">2
-                    </label>
-                    <label for="THREE3">
-                        <input id="THREE3" value="three" type="radio" class="input"name="one-two-three-four-five">3
-                    </label>
-                    <label for="FOUR4">
-                        <input id="FOUR4" value="four" type="radio" class="input" name="one-two-three-four-five">4
-                    </label>
-                    <label for="FIVE5">
-                        <input id="FIVE5" value="five" type="radio" class="input" name="one-two-three-four-five">5
-                    </label>
+                    <div class="radio">
+                        <label for="ONE1" class="radio-inline">
+                            <input id="ONE1" value="one" type="radio" name="one-two-three-four-five">1
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label for="TWO2" class="radio-inline">
+                            <input id="TWO2" value="two" type="radio" name="one-two-three-four-five">2
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label for="THREE3" class="radio-inline">
+                            <input id="THREE3" value="three" type="radio" name="one-two-three-four-five">3
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label for="FOUR4" class="radio-inline">
+                            <input id="FOUR4" value="four" type="radio" name="one-two-three-four-five">4
+                        </label>
+                    </div>
+
+                    <div class="radio">
+                        <label for="FIVE5" class="radio-inline">
+                            <input id="FIVE5" value="five" type="radio" name="one-two-three-four-five">5
+                        </label>
+                    </div>
                 </div>
-    
-                <div class="container-form">
+                <div class="form-group">
                     <p>Which field are you interested in?</p>
-                    <label for="python">
-                        <input id="python" value="python" type="checkbox" >Python
-                    </label>
-                    <label for="java">
-                        <input id="java" value="java" type="checkbox" >Java
-                    </label>
-                    <label for="cyber-security">
-                        <input id="cyber-security" value="cyber-security" type="checkbox">Cyber Security
-                    </label>
-                    <label for="android">
-                        <input id="android" value="android" type="checkbox" >Android Development
-                    </label>
+                    <div class="checkbox">
+                        <label for="python">
+                            <input id="python" value="python" type="checkbox">Python
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label for="java">
+                            <input id="java" value="java" type="checkbox">Java
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label for="cyber-security">
+                            <input id="cyber-security" value="cyber-security" type="checkbox">Cyber Security
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label for="android">
+                            <input id="android" value="android" type="checkbox">Android Development
+                        </label>
+                    </div>
                 </div>
-    
-                <p>Any additional information or comments</p>
-                <textarea id="extra" class="input-extra" name="extra" placeholder="Enter comment"></textarea>
-                
-                <button type="submit" id="submit">Submit</button>
+
+                <div class="form-group">
+                    <p>Any additional information or comments</p>
+                    <textarea id="extra" class="form-control" name="extra" placeholder="Enter comment"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class=" btn btn-primary btn-lg" type="submit" id="submit">Submit</button>  
+                </div>
             </form>
         </div>
-        
     </body>
 </html>
